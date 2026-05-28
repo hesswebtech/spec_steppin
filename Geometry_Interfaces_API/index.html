@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Interfaces API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="geometryInterfaces_API.js" defer></script>
+</head>
+    
+<body>
+<header>
+    <h1>Spec Steppin': Geometry Interfaces</h1>
+    <p>Click anywhere inside the container boundaries. The script uses native <code>DOMPoint</code> and computed
+        <code>DOMMatrix</code> objects to accurately capture coordinate vectors relative to both the viewport and the
+        rotated target container.</p>
+</header>
+
+<div class="playground" id="space-container">
+    <div id="target-element">TRANSFORMED SPACE</div>
+    <div id="click-dot" class="pointer-dot" style="display: none;"></div>
+</div>
+
+<div class="output-panel">
+    <div class="output-grid">
+        <div class="metric">
+            <div class="metric-title">Standard Screen Coordinates (DOMPoint)</div>
+            <div id="screen-coords" class="metric-value">x: --, y: --</div>
+        </div>
+        <div class="metric">
+            <div class="metric-title">Axis-Aligned Bounding (DOMRect)</div>
+            <div id="bounding-rect" class="metric-value">w: --, h: --</div>
+        </div>
+        <div class="metric">
+            <div class="metric-title">Calculated Transform Matrix (DOMMatrix)</div>
+            <div id="matrix-signature" class="metric-value">m11: --, m12: --</div>
+        </div>
+        <div class="metric">
+            <div class="metric-title">Target Local Projection</div>
+            <div id="local-projected" class="metric-value">Local x: --, y: --</div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
