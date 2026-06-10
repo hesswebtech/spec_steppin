@@ -1,0 +1,10 @@
+#demo-box {
+    padding: 1em;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+.highlight {
+    background: #ffe066 !important;
+}
