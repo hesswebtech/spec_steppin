@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Drag Drop API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="htmlDragDrop_API.js" defer></script>
+</head>
+    
+<body>
+    <main class="container">
+        <h2>Native HTML Drag and Drop Demo</h2>
+        <p>Grab a task card from the source panel and drop it into the target zone below.</p>
+    
+        <!-- Source Panel -->
+        <section class="panel">
+            <h3>Draggable Tasks</h3>
+            <div class="draggable-container">
+                <div class="draggable-item" draggable="true" id="task-1">
+                    <span>📦 Task 1: Audit Inventory Sync Logs</span>
+                </div>
+                <div class="draggable-item" draggable="true" id="task-2">
+                    <span>⚙️ Task 2: Configure JWT Webhook Security</span>
+                </div>
+                <div class="draggable-item" draggable="true" id="task-3">
+                    <span>📖 Task 3: Structure Greek Case Study Draft</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drop Zone Target -->
+        <section class="panel">
+            <h3>Target Drop Zone</h3>
+            <div id="drop-zone">
+                <p class="drop-message">Drop Files or Folders Here</p>
+            </div>
+        </section>
+
+        <!-- Output Logs -->
+        <section class="panel">
+            <h3>Execution Log</h3>
+            <pre id="log-output">System idle. Waiting for drag actions...</pre>
+        </section>
+    </main>
+</body>
+
+</html>
