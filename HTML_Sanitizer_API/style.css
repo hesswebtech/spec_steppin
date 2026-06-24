@@ -1,0 +1,195 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-danger: #ef4444;
+    --accent-safe: #22c55e;
+    --accent-interactive: #3b82f6;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+ header {
+     text-align: center;
+     margin-bottom: 2rem;
+ }
+
+ h1 {
+     margin: 0 0 0.5rem 0;
+     font-size: 2.25rem;
+     font-weight: 800;
+     background: linear-gradient(135deg, #60a5fa, #c084fc);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+
+ p.subtitle {
+     color: var(--text-muted);
+     margin: 0;
+     font-size: 1.1rem;
+ }
+
+ .support-banner {
+     background-color: rgba(239, 68, 68, 0.15);
+     border: 1px solid var(--accent-danger);
+     color: #fca5a5;
+     padding: 1rem;
+     border-radius: 0.5rem;
+     margin-bottom: 1.5rem;
+     text-align: center;
+     font-weight: 500;
+     display: none;
+ }
+
+ .card {
+     background-color: var(--card-bg);
+     border: 1px solid var(--border-color);
+     border-radius: 0.75rem;
+     padding: 1.5rem;
+     margin-bottom: 1.5rem;
+     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ }
+
+ label {
+     display: block;
+     font-weight: 600;
+     margin-bottom: 0.5rem;
+     color: var(--text-main);
+ }
+
+ textarea {
+     width: 100%;
+     box-sizing: border-box;
+     height: 110px;
+     background-color: var(--bg-color);
+     border: 1px solid var(--border-color);
+     border-radius: 0.5rem;
+     color: #38bdf8;
+     font-family: "Fira Code", "Courier New", Courier, monospace;
+     font-size: 0.9rem;
+     padding: 0.75rem;
+     resize: vertical;
+ }
+
+ .cta-row {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 1rem;
+     margin-top: 1rem;
+ }
+
+ button {
+     border: none;
+     padding: 0.75rem 1rem;
+     border-radius: 0.5rem;
+     font-weight: 600;
+     font-size: 0.95rem;
+     cursor: pointer;
+     transition: opacity 0.2s ease, transform 0.1s ease;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.5rem;
+ }
+
+ button:hover {
+     opacity: 0.9;
+ }
+
+ button:active {
+     transform: scale(0.98);
+ }
+
+ .btn-danger {
+     background-color: var(--accent-danger);
+     color: #ffffff;
+ }
+
+ .btn-safe {
+     background-color: var(--accent-safe);
+     color: #ffffff;
+ }
+
+ .output-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 1.5rem;
+ }
+
+ .output-box {
+     min-height: 150px;
+     background-color: var(--bg-color);
+     border: 1px solid var(--border-color);
+     border-radius: 0.5rem;
+     padding: 1rem;
+     position: relative;
+     overflow: auto;
+ }
+
+ .output-title {
+     font-size: 0.85rem;
+     text-transform: uppercase;
+     letter-spacing: 0.05em;
+     font-weight: 700;
+     margin-bottom: 0.75rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .badge {
+     font-size: 0.75rem;
+     font-weight: 700;
+     padding: 0.2rem 0.5rem;
+     border-radius: 9999px;
+     text-transform: uppercase;
+ }
+
+ .badge-danger {
+     background-color: rgba(239, 68, 68, 0.2);
+     color: #fca5a5;
+     border: 1px solid rgba(239, 68, 68, 0.4);
+ }
+
+         .badge-safe {
+             background-color: rgba(34, 197, 94, 0.2);
+             color: #86efac;
+             border: 1px solid rgba(34, 197, 94, 0.4);
+         }
+    
+         .tracker-log {
+             color: var(--text-muted);
+             font-size: 0.85rem;
+             margin-top: 1rem;
+             background-color: #020617;
+             padding: 0.75rem;
+             border-radius: 0.5rem;
+             border: 1px dashed var(--border-color);
+         }
+    
+         .tracker-log span.alert-hit {
+             color: var(--accent-danger);
+             font-weight: bold;
+         }
+    
+         .tracker-log span.alert-clean {
+             color: var(--accent-safe);
+             font-weight: bold;
+         }

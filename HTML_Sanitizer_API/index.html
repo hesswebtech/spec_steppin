@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Drag Drop API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="htmlSanitizer_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <header>
+            <h1>HTML Sanitizer API</h1>
+            <p class="subtitle">Secure visual live-sandbox vs. legacy dangerous innerHTML</p>
+        </header>
+    
+        <div id="supportBanner" class="support-banner">
+            ⚠️ Your browser does not natively support the HTML Sanitizer API yet. Please enable it in experimental features
+            or use an updated browser.
+        </div>
+    
+        <div class="card">
+            <label for="htmlInput">Untrusted HTML Input (Edit or Use Default Malicious Payload):</label>
+            <textarea
+                id="htmlInput">&lt;p&gt;This is &lt;strong&gt;bold text&lt;/strong&gt;. &lt;script&gt;window.logXss('Execution via script tag!')&lt;/script&gt;&lt;img src="x" onerror="window.logXss('Execution via inline onerror!')"&gt; and a &lt;a href="javascript:window.logXss('Execution via Javascript URI!')"&gt;link&lt;/a&gt;.&lt;/p&gt;</textarea>
+    
+            <div class="cta-row">
+                <button class="btn-danger" onclick="injectUnsafe()">
+                    💥 Run innerHTML (Dangerous)
+                </button>
+                <button class="btn-safe" onclick="injectSafe()">
+                    🛡️ Run setHTML() (Safe)
+                </button>
+            </div>
+        </div>
+
+        <div class="output-grid">
+            <div class="card">
+                <div class="output-title" style="color: #feca1d;">
+                    Unsafe Sandbox Subtree
+                    <span class="badge badge-danger">XSS Exposed</span>
+                </div>
+                <div id="unsafeOutput" class="output-box"></div>
+            </div>
+        
+            <div class="card">
+                <div class="output-title" style="color: #64ffda;">
+                    Sanitized Subtree
+                    <span class="badge badge-safe">XSS Blocked</span>
+                </div>
+                <div id="safeOutput" class="output-box"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <label>Live Security Execution Logs:</label>
+            <div id="executionLogs" class="tracker-log">Waiting for execution...</div>
+        </div>
+    </div>
+</body>
+
+</html>
