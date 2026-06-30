@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="history_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="router-card">
+    
+        <!-- Title Header -->
+        <header class="card-header">
+            <h1 class="header-title">History API Router</h1>
+            <p class="header-subtitle">Watch the URL and state update on navigation</p>
+        </header>
+    
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs" aria-label="Tab Navigation">
+            <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-button">
+                Dashboard 📊
+            </button>
+            <button onclick="switchTab('analytics')" id="btn-analytics" class="tab-button">
+                Analytics 📈
+            </button>
+            <button onclick="switchTab('settings')" id="btn-settings" class="tab-button">
+                Settings ⚙️
+            </button>
+        </nav>
+
+        <!-- Dynamic Content Display Panel -->
+        <main class="content-panel">
+            <h2 id="content-title" class="content-title">Loading...</h2>
+            <p id="content-timestamp" class="content-timestamp"></p>
+        </main>
+        
+        <!-- Serial State Payload Inspector -->
+        <section class="inspector-section">
+            <h3 class="inspector-title">Current State Payload</h3>
+            <pre id="state-inspector" class="state-inspector">{}</pre>
+        </section>
+        
+        <!-- Native Browser Navigation Simulators -->
+        <footer class="controls-footer">
+            <button onclick="window.history.back()" class="control-button">
+                ← Back
+            </button>
+            <button onclick="window.history.forward()" class="control-button">
+                Forward →
+            </button>
+        </footer>
+        
+    </div>
+</body>
+
+</html>
