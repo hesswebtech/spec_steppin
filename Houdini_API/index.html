@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houdini API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="houdini_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <h2>CSS Houdini Paint API Demo</h2>
+        <p>Using background-thread worklets to paint pixels natively.</p>
+    
+        <div class="houdini-canvas" id="canvas"></div>
+    
+        <div class="controls">
+            <label for="size-slider">Grid Size: <span id="size-val">32px</span></label>
+            <input type="range" id="size-slider" min="10" max="100" value="32">
+        </div>
+    </div>
+</body>
+
+</html>
