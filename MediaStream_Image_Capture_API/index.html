@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        MediaStream Image Capture Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="mediaStreamImageCapture_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <div class="viewports">
+            <div class="viewport-box">
+                <h3>Live Video Stream</h3>
+                <video id="webcam-preview" autoplay playsinline muted></video>
+            </div>
+            <div class="viewport-box">
+                <h3>Captured Frame</h3>
+                <img id="captured-result" alt="Captured high-resolution frame will display here" />
+            </div>
+        </div>
+    
+        <div class="controls">
+            <button id="start-btn">Start Camera</button>
+            <button id="capture-btn" disabled>Take Photo</button>
+        </div>
+    
+        <div id="status" class="status-message"></div>
+    </div>
+</body>
+
+</html>
