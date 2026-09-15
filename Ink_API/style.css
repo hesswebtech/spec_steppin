@@ -1,0 +1,10 @@
+/* CSS: Prevent default browser touch interactions from canceling drawing */
+#ink-canvas {
+    touch-action: none;
+    /* Required to suppress default browser scroll and pinch gestures */
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    cursor: crosshair;
+    display: block;
+}
