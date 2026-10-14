@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Insertable Streams for MediaStreamTrack API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="insertableStreamsforMediaStreamTrack_API.js" defer></script>
+</head>
+    
+<body>
+    <main class="container">
+        <header>
+            <h1>Insertable Streams for MediaStreamTrack</h1>
+            <p class="subtitle">Real-time Web Stream frame transformation & recording</p>
+        </header>
+    
+        <section class="viewport-grid">
+            <div class="card">
+                <h2>Live Transformed Stream</h2>
+                <video id="preview" autoplay playsinline muted></video>
+            </div>
+            <div class="card">
+                <h2>Recorded Output</h2>
+                <video id="playback" controls playsinline></video>
+            </div>
+        </section>
+    
+        <section class="controls">
+            <button id="btnStart" class="btn primary">Start Camera & Transform</button>
+            <button id="btnRecord" class="btn accent" disabled>Start Recording</button>
+            <button id="btnStop" class="btn danger" disabled>Stop Recording</button>
+        </section>
+    
+        <div id="status" class="status-banner">Ready. Click "Start Camera" to initialize.</div>
+    </main>
+</body>
+
+</html>
