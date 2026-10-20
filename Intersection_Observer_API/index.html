@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Intersection Observer API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="intersectionObserver_API.js" defer></script>
+</head>
+    
+<body>
+    <header class="hero">
+        <h1>Scroll Down to Reveal Cards</h1>
+        <p>Watch how cards smoothly animate in as they enter the viewport.</p>
+    </header>
+    
+    <main class="card-grid">
+        <div class="card reveal-card">
+            <h3>Fast Execution</h3>
+            <p>Calculations occur asynchronously, bypassing scroll-listener overhead.</p>
+        </div>
+        <div class="card reveal-card">
+            <h3>Root Margins</h3>
+            <p>Preload media before it hits the visible frame using rootMargin offsets.</p>
+        </div>
+        <div class="card reveal-card">
+            <h3>Thresholds</h3>
+            <p>Define exact visibility ratios before triggering interactive states.</p>
+        </div>
+        <div class="card reveal-card">
+            <h3>One-Time Trigger</h3>
+            <p>Unobserve elements immediately after animation to free browser resources.</p>
+        </div>
+    </main>
+</body>
+
+</html>
