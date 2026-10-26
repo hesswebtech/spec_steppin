@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Invoker Commands API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="invokerCommands_API.js" defer></script>
+</head>
+    
+<body>
+<div class="demo-wrapper">
+    <!-- Section 1: Pure Declarative Modal (No JS Required) -->
+    <section class="demo-card">
+        <h2>Native Dialog Control</h2>
+        <p>Open and close this dialog declaratively using built-in commands.</p>
+        <button commandfor="site-dialog" command="show-modal" class="btn primary">
+            Open Dialog
+        </button>
+    </section>
+
+    <!-- The Target Dialog -->
+    <dialog id="site-dialog" class="custom-dialog">
+        <div class="dialog-content">
+            <h3>Invoker Commands Demo</h3>
+            <p>This modal was opened without a single line of JavaScript.</p>
+            <button commandfor="site-dialog" command="close" class="btn secondary">
+                Close Dialog
+            </button>
+        </div>
+    </dialog>
+
+    <!-- Section 2: Custom Command Event Target -->
+    <section class="demo-card">
+        <h2>Custom Invoker Commands</h2>
+        <p>Target listens for native <code>command</code> events via custom actions.</p>
+
+        <div class="button-group">
+            <!-- Buttons invoke actions on the target container -->
+            <button commandfor="status-panel" command="--set-active" class="btn">
+                Set Active
+            </button>
+            <button commandfor="status-panel" command="--reset" class="btn secondary">
+                Reset
+            </button>
+        </div>
+
+        <!-- Target Element receiving the commands -->
+        <div id="status-panel" class="status-panel">
+            Status: <span id="status-indicator">Idle</span>
+        </div>
+    </section>
+</div>
+</body>
+
+</html>
